@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Finance Dashboard</h1>
+
+  <div>
+    <label>Role:</label>
+    <select id="roleSelect">
+      <option value="viewer">Viewer</option>
+      <option value="admin">Admin</option>
+    </select>
+  </div>
+</header>
+
+<main>
+
+  <section id="dashboard" class="section"></section>
+
+  <section class="section">
+    <h2>Transactions</h2>
+
+    <input type="text" id="search" placeholder="Search category...">
+    <button onclick="sortByAmount()">Sort by Amount</button>
+
+    <div id="transactions"></div>
+
+    
+    <div id="formSection" style="display:none;">
+      <h3>Add Transaction</h3>
+
+      <input type="number" id="amount" placeholder="Amount"><br>
+      <input type="text" id="category" placeholder="Category"><br>
+
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select><br>
+
+      <button onclick="addTransaction()">Add</button>
+    </div>
+
+  </section>
+
+  <section id="insights" class="section"></section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
